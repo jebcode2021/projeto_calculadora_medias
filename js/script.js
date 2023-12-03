@@ -26,7 +26,7 @@ function adicionarLinha() {
     if(atividades.includes(inputNomeAtividade.value)){
         const containerMensagem = document.querySelector('.error-message');
         containerMensagem.innerHTML = mensagemJaInserida
-        containerMensagem.style.display = 'block';7
+        containerMensagem.style.display = 'block';
     }else {
         atividades.push(inputNomeAtividade.value);
         notas.push(parseFloat(inputNotaAtividade.value));
@@ -38,6 +38,10 @@ function adicionarLinha() {
         linha += "</tr>";
     
         linhas += linha;
+        
+        const containerMensagem = document.querySelector('.error-message');
+        containerMensagem.innerHTML = mensagemJaInserida
+        containerMensagem.style.display = 'none';
     }
 
     inputNomeAtividade.value = '';
