@@ -38,7 +38,7 @@ function adicionarLinha() {
         linha += "</tr>";
     
         linhas += linha;
-        
+
         const containerMensagem = document.querySelector('.error-message');
         containerMensagem.innerHTML = mensagemJaInserida
         containerMensagem.style.display = 'none';
@@ -56,7 +56,7 @@ function atualizarTabela() {
 function atualizarMediaFinal() {
     const mediaFinal = calcularMediaFinal();
     
-    document.getElementById('media-final-valor').innerHTML = mediaFinal;
+    document.getElementById('media-final-valor').innerHTML = mediaFinal.toFixed(2);
     document.getElementById('media-final-resultado').innerHTML = mediaFinal >= notaMinima ? spanAprovado : spanReprovado;
 }
 
